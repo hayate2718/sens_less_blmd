@@ -14419,7 +14419,7 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1608" package3d_urn="urn:adsk.eagle:package:23621/2" value="0.1u"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1608" package3d_urn="urn:adsk.eagle:package:23621/2" value="0.1u"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1608" package3d_urn="urn:adsk.eagle:package:23621/2" value="0.1u"/>
-<part name="R13" library="user_rcl" deviceset="R_REG" device=""/>
+<part name="R13" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
 <part name="VCC1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCCIO" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
 <part name="R_I4" library="user_rcl" deviceset="R_SHUGOU" device=""/>
@@ -14431,6 +14431,8 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <part name="CON4" library="user_conector" deviceset="XH_8P" device=""/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1608" package3d_urn="urn:adsk.eagle:package:23621/2"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1608" package3d_urn="urn:adsk.eagle:package:23621/2"/>
+<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
+<part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14700,6 +14702,12 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <instance part="C6" gate="G$1" x="327.66" y="2.54" smashed="yes" rot="R270">
 <attribute name="NAME" x="328.041" y="1.016" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="322.961" y="1.016" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="GND13" gate="G$1" x="317.5" y="254" smashed="yes">
+<attribute name="VALUE" x="314.96" y="251.46" size="1.778" layer="96"/>
+</instance>
+<instance part="GND17" gate="G$1" x="261.62" y="284.48" smashed="yes">
+<attribute name="VALUE" x="259.08" y="281.94" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -15534,6 +15542,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <junction x="391.16" y="177.8"/>
 <label x="401.32" y="177.8" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="CON1" gate="G$1" pin="PIN2"/>
+<wire x1="266.7" y1="297.18" x2="261.62" y2="297.18" width="0.1524" layer="91"/>
+<label x="261.62" y="297.18" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="GNDIO" class="0">
 <segment>
@@ -15568,12 +15581,29 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="83.82" y1="246.38" x2="78.74" y2="246.38" width="0.1524" layer="91"/>
 <junction x="78.74" y="246.38"/>
 </segment>
+<segment>
+<pinref part="CON4" gate="G$1" pin="PIN1"/>
+<wire x1="322.58" y1="264.16" x2="317.5" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="GND13" gate="G$1" pin="GNDIO"/>
+<wire x1="317.5" y1="264.16" x2="317.5" y2="256.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CON1" gate="G$1" pin="PIN1"/>
+<wire x1="266.7" y1="292.1" x2="261.62" y2="292.1" width="0.1524" layer="91"/>
+<pinref part="GND17" gate="G$1" pin="GNDIO"/>
+<wire x1="261.62" y1="292.1" x2="261.62" y2="287.02" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCCIO" class="0">
 <segment>
 <pinref part="R13" gate="G$1" pin="2"/>
 <pinref part="VCC1" gate="G$1" pin="VCCIO"/>
 <wire x1="391.16" y1="187.96" x2="391.16" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CON1" gate="G$1" pin="PIN3"/>
+<wire x1="266.7" y1="302.26" x2="261.62" y2="302.26" width="0.1524" layer="91"/>
+<label x="261.62" y="302.26" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="N$24" class="0">
@@ -15636,12 +15666,22 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="58.42" y1="292.1" x2="55.88" y2="292.1" width="0.1524" layer="91"/>
 <label x="55.88" y="292.1" size="1.778" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="CON4" gate="G$1" pin="PIN8"/>
+<wire x1="322.58" y1="299.72" x2="317.5" y2="299.72" width="0.1524" layer="91"/>
+<label x="317.5" y="299.72" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="ICHI" class="0">
 <segment>
 <pinref part="R_I4" gate="G$1" pin="2"/>
 <wire x1="58.42" y1="289.56" x2="55.88" y2="289.56" width="0.1524" layer="91"/>
 <label x="55.88" y="289.56" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="CON4" gate="G$1" pin="PIN7"/>
+<wire x1="322.58" y1="294.64" x2="317.5" y2="294.64" width="0.1524" layer="91"/>
+<label x="317.5" y="294.64" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="IBLO" class="0">
@@ -15650,12 +15690,22 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="58.42" y1="287.02" x2="55.88" y2="287.02" width="0.1524" layer="91"/>
 <label x="55.88" y="287.02" size="1.778" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="CON4" gate="G$1" pin="PIN6"/>
+<wire x1="322.58" y1="289.56" x2="317.5" y2="289.56" width="0.1524" layer="91"/>
+<label x="317.5" y="289.56" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="IBHI" class="0">
 <segment>
 <pinref part="R_I4" gate="G$1" pin="4"/>
 <wire x1="58.42" y1="284.48" x2="55.88" y2="284.48" width="0.1524" layer="91"/>
 <label x="55.88" y="284.48" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="CON4" gate="G$1" pin="PIN5"/>
+<wire x1="322.58" y1="284.48" x2="317.5" y2="284.48" width="0.1524" layer="91"/>
+<label x="317.5" y="284.48" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="IALO" class="0">
@@ -15664,6 +15714,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="58.42" y1="243.84" x2="55.88" y2="243.84" width="0.1524" layer="91"/>
 <label x="55.88" y="243.84" size="1.778" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="CON4" gate="G$1" pin="PIN4"/>
+<wire x1="322.58" y1="279.4" x2="317.5" y2="279.4" width="0.1524" layer="91"/>
+<label x="317.5" y="279.4" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="IAHI" class="0">
 <segment>
@@ -15671,33 +15726,10 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="58.42" y1="241.3" x2="55.88" y2="241.3" width="0.1524" layer="91"/>
 <label x="55.88" y="241.3" size="1.778" layer="95" rot="R180"/>
 </segment>
-</net>
-<net name="N$31" class="0">
 <segment>
-<pinref part="CON1" gate="G$1" pin="PIN3"/>
-<wire x1="266.7" y1="302.26" x2="261.62" y2="302.26" width="0.1524" layer="91"/>
-<label x="261.62" y="302.26" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$32" class="0">
-<segment>
-<pinref part="CON1" gate="G$1" pin="PIN2"/>
-<wire x1="266.7" y1="297.18" x2="261.62" y2="297.18" width="0.1524" layer="91"/>
-<label x="261.62" y="297.18" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$33" class="0">
-<segment>
-<pinref part="CON1" gate="G$1" pin="PIN1"/>
-<wire x1="266.7" y1="292.1" x2="261.62" y2="292.1" width="0.1524" layer="91"/>
-<label x="261.62" y="292.1" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="CON2" gate="G$1" pin="PIN4"/>
-<wire x1="269.24" y1="274.32" x2="264.16" y2="274.32" width="0.1524" layer="91"/>
-<label x="264.16" y="274.32" size="1.778" layer="95" rot="R180"/>
+<pinref part="CON4" gate="G$1" pin="PIN3"/>
+<wire x1="322.58" y1="274.32" x2="317.5" y2="274.32" width="0.1524" layer="91"/>
+<label x="317.5" y="274.32" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -15707,102 +15739,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <label x="264.16" y="269.24" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="N$36" class="0">
-<segment>
-<pinref part="CON2" gate="G$1" pin="PIN2"/>
-<wire x1="269.24" y1="264.16" x2="264.16" y2="264.16" width="0.1524" layer="91"/>
-<label x="264.16" y="264.16" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$37" class="0">
-<segment>
-<pinref part="CON2" gate="G$1" pin="PIN1"/>
-<wire x1="269.24" y1="259.08" x2="264.16" y2="259.08" width="0.1524" layer="91"/>
-<label x="264.16" y="259.08" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$38" class="0">
-<segment>
-<pinref part="CON3" gate="G$1" pin="PIN4"/>
-<wire x1="269.24" y1="241.3" x2="264.16" y2="241.3" width="0.1524" layer="91"/>
-<label x="264.16" y="241.3" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
 <net name="N$39" class="0">
 <segment>
 <pinref part="CON3" gate="G$1" pin="PIN3"/>
 <wire x1="269.24" y1="236.22" x2="264.16" y2="236.22" width="0.1524" layer="91"/>
 <label x="264.16" y="236.22" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$40" class="0">
-<segment>
-<pinref part="CON3" gate="G$1" pin="PIN2"/>
-<wire x1="269.24" y1="231.14" x2="264.16" y2="231.14" width="0.1524" layer="91"/>
-<label x="264.16" y="231.14" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$41" class="0">
-<segment>
-<pinref part="CON3" gate="G$1" pin="PIN1"/>
-<wire x1="269.24" y1="226.06" x2="264.16" y2="226.06" width="0.1524" layer="91"/>
-<label x="264.16" y="226.06" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$42" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN8"/>
-<wire x1="322.58" y1="299.72" x2="317.5" y2="299.72" width="0.1524" layer="91"/>
-<label x="317.5" y="299.72" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$43" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN7"/>
-<wire x1="322.58" y1="294.64" x2="317.5" y2="294.64" width="0.1524" layer="91"/>
-<label x="317.5" y="294.64" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$44" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN6"/>
-<wire x1="322.58" y1="289.56" x2="317.5" y2="289.56" width="0.1524" layer="91"/>
-<label x="317.5" y="289.56" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$45" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN5"/>
-<wire x1="322.58" y1="284.48" x2="317.5" y2="284.48" width="0.1524" layer="91"/>
-<label x="317.5" y="284.48" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$46" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN4"/>
-<wire x1="322.58" y1="279.4" x2="317.5" y2="279.4" width="0.1524" layer="91"/>
-<label x="317.5" y="279.4" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$47" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN3"/>
-<wire x1="322.58" y1="274.32" x2="317.5" y2="274.32" width="0.1524" layer="91"/>
-<label x="317.5" y="274.32" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$48" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN2"/>
-<wire x1="322.58" y1="269.24" x2="317.5" y2="269.24" width="0.1524" layer="91"/>
-<label x="317.5" y="269.24" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$49" class="0">
-<segment>
-<pinref part="CON4" gate="G$1" pin="PIN1"/>
-<wire x1="322.58" y1="264.16" x2="317.5" y2="264.16" width="0.1524" layer="91"/>
-<label x="317.5" y="264.16" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="U_GND" class="0">
@@ -15816,6 +15757,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="111.76" y1="15.24" x2="132.08" y2="15.24" width="0.1524" layer="91"/>
 <label x="132.08" y="15.24" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="PIN1"/>
+<wire x1="269.24" y1="259.08" x2="264.16" y2="259.08" width="0.1524" layer="91"/>
+<label x="264.16" y="259.08" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="U_OUT" class="0">
 <segment>
@@ -15823,6 +15769,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="121.92" y1="35.56" x2="121.92" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="27.94" x2="132.08" y2="27.94" width="0.1524" layer="91"/>
 <label x="132.08" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="PIN2"/>
+<wire x1="269.24" y1="264.16" x2="264.16" y2="264.16" width="0.1524" layer="91"/>
+<label x="264.16" y="264.16" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="U_VCC" class="0">
@@ -15834,6 +15785,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="127" y1="20.32" x2="132.08" y2="20.32" width="0.1524" layer="91"/>
 <junction x="127" y="20.32"/>
 <label x="132.08" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="PIN4"/>
+<wire x1="269.24" y1="274.32" x2="264.16" y2="274.32" width="0.1524" layer="91"/>
+<label x="264.16" y="274.32" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="W_GND" class="0">
@@ -15847,6 +15803,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="317.5" y1="-2.54" x2="337.82" y2="-2.54" width="0.1524" layer="91"/>
 <label x="337.82" y="-2.54" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="CON3" gate="G$1" pin="PIN1"/>
+<wire x1="269.24" y1="226.06" x2="264.16" y2="226.06" width="0.1524" layer="91"/>
+<label x="264.16" y="226.06" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="W_OUT" class="0">
 <segment>
@@ -15854,6 +15815,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="327.66" y1="17.78" x2="327.66" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="327.66" y1="10.16" x2="337.82" y2="10.16" width="0.1524" layer="91"/>
 <label x="337.82" y="10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CON3" gate="G$1" pin="PIN2"/>
+<wire x1="269.24" y1="231.14" x2="264.16" y2="231.14" width="0.1524" layer="91"/>
+<label x="264.16" y="231.14" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="W_VCC" class="0">
@@ -15865,6 +15831,11 @@ Max Continuous Drain Current : 85A&lt;br&gt;
 <wire x1="332.74" y1="2.54" x2="337.82" y2="2.54" width="0.1524" layer="91"/>
 <junction x="332.74" y="2.54"/>
 <label x="337.82" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CON3" gate="G$1" pin="PIN4"/>
+<wire x1="269.24" y1="241.3" x2="264.16" y2="241.3" width="0.1524" layer="91"/>
+<label x="264.16" y="241.3" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 </nets>
