@@ -265,11 +265,23 @@ UsedLibraryUrn="urn:adsk.eagle:library:196"
 UsedLibraryUrn="urn:adsk.eagle:library:197"
 UsedLibraryUrn="urn:adsk.eagle:library:198"
 UsedLibraryUrn="urn:adsk.eagle:library:199"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_conector.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_diode.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_emifilter.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_heatshink.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_hyuzu.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_ic.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_leds.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_osc.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_rcl.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_swich.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_tr_fet_igbt.lbr"
 
 [Win_1]
 Type="Control Panel"
 Number=0
 
 [Desktop]
-Screen="960 540"
+Screen="1920 1080"
 Window="Win_1"
