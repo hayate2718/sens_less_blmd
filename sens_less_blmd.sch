@@ -117,18 +117,6 @@
 <smd name="PAD" x="4.85" y="1.95" dx="5" dy="3" layer="1"/>
 <text x="1.27" y="6.35" size="1.27" layer="25">&gt;NAME</text>
 <rectangle x1="0" y1="0.127" x2="9.779" y2="3.81" layer="39"/>
-<pad name="PAD@2" x="2.794" y="2.921" drill="0.3"/>
-<pad name="PAD@5" x="6.858" y="2.921" drill="0.3"/>
-<pad name="PAD@4" x="5.461" y="2.921" drill="0.3"/>
-<pad name="PAD@3" x="4.191" y="2.921" drill="0.3"/>
-<pad name="PAD@6" x="2.794" y="1.905" drill="0.3"/>
-<pad name="PAD@7" x="4.191" y="1.905" drill="0.3"/>
-<pad name="PAD@8" x="5.461" y="1.905" drill="0.3"/>
-<pad name="PAD@9" x="6.858" y="1.905" drill="0.3"/>
-<pad name="PAD@10" x="2.794" y="1.016" drill="0.3"/>
-<pad name="PAD@11" x="4.191" y="1.016" drill="0.3"/>
-<pad name="PAD@12" x="5.461" y="1.016" drill="0.3"/>
-<pad name="PAD@13" x="6.858" y="1.016" drill="0.3"/>
 <smd name="PAD@14" x="4.85" y="1.95" dx="5" dy="3" layer="16"/>
 <text x="1.27" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -282,7 +270,7 @@ digikey：通販コード[620-1893-1-ND]&lt;br&gt;
 <devices>
 <device name="" package="TSSOP_28P_ALLEGRO_E">
 <connects>
-<connect gate="G$1" pin="PAD" pad="PAD PAD@2 PAD@3 PAD@4 PAD@5 PAD@6 PAD@7 PAD@8 PAD@9 PAD@10 PAD@11 PAD@12 PAD@13 PAD@14"/>
+<connect gate="G$1" pin="PAD" pad="PAD PAD@14"/>
 <connect gate="G$1" pin="PIN10_GLA" pad="PIN10"/>
 <connect gate="G$1" pin="PIN11_GHA" pad="PIN11"/>
 <connect gate="G$1" pin="PIN12_SA" pad="PIN12"/>
@@ -13750,6 +13738,14 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pad name="P$7" x="17.45" y="2.35" drill="1.3" shape="square"/>
 <pad name="P$8" x="19.95" y="2.35" drill="1.3" shape="square"/>
 </package>
+<package name="XH_2P">
+<pad name="P$1" x="2.45" y="2.35" drill="0.9" shape="square"/>
+<pad name="P$2" x="5.05" y="2.35" drill="0.9" shape="square"/>
+<wire x1="0" y1="0" x2="0" y2="5.75" width="0.127" layer="21"/>
+<wire x1="0" y1="5.75" x2="7.4" y2="5.75" width="0.127" layer="21"/>
+<wire x1="7.4" y1="5.75" x2="7.4" y2="0" width="0.127" layer="21"/>
+<wire x1="7.4" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="XT60">
@@ -13773,6 +13769,14 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pin name="PIN6" x="7.62" y="5.08" length="middle" rot="R270"/>
 <pin name="PIN7" x="12.7" y="5.08" length="middle" rot="R270"/>
 <pin name="PIN8" x="17.78" y="5.08" length="middle" rot="R270"/>
+</symbol>
+<symbol name="CON_2P">
+<pin name="PIN1" x="5.08" y="2.54" length="middle" rot="R180"/>
+<pin name="PIN2" x="5.08" y="-2.54" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -13816,6 +13820,23 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="XH_2P">
+<description>トップ型xhコネクタ2ピン　秋月に売ってるやつ</description>
+<gates>
+<gate name="G$1" symbol="CON_2P" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="XH_2P">
+<connects>
+<connect gate="G$1" pin="PIN1" pad="P$1"/>
+<connect gate="G$1" pin="PIN2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="user_tr_fet_igbt">
@@ -13829,96 +13850,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <smd name="6" x="3.085" y="-0.635" dx="1.17" dy="0.6" layer="1" rot="R180" cream="no"/>
 <smd name="7" x="3.085" y="0.635" dx="1.17" dy="0.6" layer="1" rot="R180" cream="no"/>
 <smd name="8" x="3.085" y="1.905" dx="1.17" dy="0.6" layer="1" rot="R180" cream="no"/>
-<polygon width="0.0254" layer="29">
-<vertex x="-1.61" y="1.125"/>
-<vertex x="-2.31" y="1.125"/>
-<vertex x="-2.31" y="0.935"/>
-<vertex x="-2.5" y="0.935"/>
-<vertex x="-2.5" y="0.335"/>
-<vertex x="-2.5" y="-0.335"/>
-<vertex x="-2.5" y="-0.935"/>
-<vertex x="-2.31" y="-0.935"/>
-<vertex x="-2.31" y="-0.825"/>
-<vertex x="-1.61" y="-0.825"/>
-</polygon>
-<polygon width="0.0254" layer="29">
-<vertex x="-1.09" y="3.6"/>
-<vertex x="1.3" y="3.6"/>
-<vertex x="1.3" y="0.285"/>
-<vertex x="-1.09" y="0.285"/>
-</polygon>
-<polygon width="0.0254" layer="29">
-<vertex x="2.5" y="2.205"/>
-<vertex x="1.8" y="2.205"/>
-<vertex x="1.8" y="0.285"/>
-<vertex x="2.5" y="0.285"/>
-<vertex x="2.5" y="0.335"/>
-<vertex x="2.5" y="0.935"/>
-<vertex x="2.5" y="1.605"/>
-</polygon>
-<polygon width="0.0254" layer="29">
-<vertex x="2.5" y="-0.335"/>
-<vertex x="2.27" y="-0.335"/>
-<vertex x="2.27" y="-0.445"/>
-<vertex x="1.8" y="-0.445"/>
-<vertex x="1.8" y="-2.095"/>
-<vertex x="2.27" y="-2.095"/>
-<vertex x="2.27" y="-2.205"/>
-<vertex x="2.5" y="-2.205"/>
-<vertex x="2.5" y="-1.605"/>
-<vertex x="2.5" y="-0.935"/>
-</polygon>
-<polygon width="0.0254" layer="29">
-<vertex x="-1.3" y="-0.285"/>
-<vertex x="1.3" y="-0.285"/>
-<vertex x="1.3" y="-3.6"/>
-<vertex x="-1.3" y="-3.6"/>
-</polygon>
-<polygon width="0.0254" layer="1">
-<vertex x="2.5" y="2.205"/>
-<vertex x="1.8" y="2.205"/>
-<vertex x="1.8" y="0.285"/>
-<vertex x="2.5" y="0.285"/>
-<vertex x="2.5" y="0.335"/>
-<vertex x="2.5" y="0.935"/>
-<vertex x="2.5" y="1.605"/>
-</polygon>
-<polygon width="0.0254" layer="1">
-<vertex x="-1.09" y="3.6"/>
-<vertex x="1.3" y="3.6"/>
-<vertex x="1.3" y="0.285"/>
-<vertex x="-1.09" y="0.285"/>
-</polygon>
-<polygon width="0.0254" layer="1">
-<vertex x="-1.3" y="-0.285"/>
-<vertex x="1.3" y="-0.285"/>
-<vertex x="1.3" y="-3.6"/>
-<vertex x="-1.3" y="-3.6"/>
-</polygon>
-<polygon width="0.0254" layer="1">
-<vertex x="-1.61" y="1.125"/>
-<vertex x="-2.31" y="1.125"/>
-<vertex x="-2.31" y="0.935"/>
-<vertex x="-2.5" y="0.935"/>
-<vertex x="-2.5" y="0.335"/>
-<vertex x="-2.5" y="-0.335"/>
-<vertex x="-2.5" y="-0.935"/>
-<vertex x="-2.31" y="-0.935"/>
-<vertex x="-2.31" y="-0.825"/>
-<vertex x="-1.61" y="-0.825"/>
-</polygon>
-<polygon width="0.0254" layer="1">
-<vertex x="2.5" y="-0.335"/>
-<vertex x="2.27" y="-0.335"/>
-<vertex x="2.27" y="-0.445"/>
-<vertex x="1.8" y="-0.445"/>
-<vertex x="1.8" y="-2.095"/>
-<vertex x="2.27" y="-2.095"/>
-<vertex x="2.27" y="-2.205"/>
-<vertex x="2.5" y="-2.205"/>
-<vertex x="2.5" y="-1.605"/>
-<vertex x="2.5" y="-0.935"/>
-</polygon>
 <wire x1="-2.7432" y1="-2.5781" x2="2.7432" y2="-2.5781" width="0.1524" layer="51"/>
 <wire x1="2.7432" y1="-2.5781" x2="2.7432" y2="2.5781" width="0.1524" layer="51"/>
 <wire x1="2.7432" y1="2.5781" x2="-2.7432" y2="2.5781" width="0.1524" layer="51"/>
@@ -14082,6 +14013,13 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </polygon>
 <text x="-3.2712" y="4.445" size="1.27" layer="25" ratio="6">&gt;Name</text>
 <text x="-2.9988" y="-5.715" size="1.27" layer="27" ratio="6">&gt;Value</text>
+<smd name="SDPAD@2" x="-2.405" y="0" dx="0.19" dy="1.87" layer="1" rot="R180"/>
+<smd name="SDPAD@1" x="-1.96" y="0.15" dx="1.95" dy="0.7" layer="1" rot="R90"/>
+<smd name="SDPAD" x="0" y="-1.9425" dx="2.6" dy="3.315" layer="1"/>
+<smd name="DPAD" x="0.105" y="1.9425" dx="2.39" dy="3.315" layer="1"/>
+<smd name="DPAD@1" x="2.15" y="1.245" dx="0.7" dy="1.92" layer="1"/>
+<smd name="SPAD" x="2.035" y="-1.27" dx="0.47" dy="1.65" layer="1"/>
+<smd name="SPAD@1" x="2.385" y="-1.27" dx="0.23" dy="1.87" layer="1"/>
 </package>
 <package name="SOT23" urn="urn:adsk.eagle:footprint:28476/1" locally_modified="yes">
 <description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
@@ -14249,13 +14187,13 @@ digikey:448-IAUC60N04S6L045HATMA1CT-ND&lt;br&gt;
 <device name="PG-TDSON-8-57" package="PG-TDSON-8-57">
 <connects>
 <connect gate="A" pin="BATTERY" pad="8"/>
-<connect gate="A" pin="BATTERY_2" pad="7"/>
+<connect gate="A" pin="BATTERY_2" pad="7 DPAD DPAD@1"/>
 <connect gate="A" pin="G" pad="4"/>
 <connect gate="A" pin="GND" pad="6"/>
-<connect gate="A" pin="GND_2" pad="5"/>
+<connect gate="A" pin="GND_2" pad="5 SPAD SPAD@1"/>
 <connect gate="A" pin="G_2" pad="1"/>
 <connect gate="A" pin="PHASE" pad="3"/>
-<connect gate="A" pin="PHASE_2" pad="2"/>
+<connect gate="A" pin="PHASE_2" pad="2 SDPAD SDPAD@1 SDPAD@2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -14512,6 +14450,70 @@ TVSダイオード&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="user_heatshink">
+<packages>
+<package name="DCC5923L">
+<wire x1="0" y1="0" x2="0" y2="58.5" width="0.127" layer="21"/>
+<wire x1="0" y1="58.5" x2="23" y2="58.5" width="0.127" layer="21"/>
+<wire x1="23" y1="58.5" x2="23" y2="0" width="0.127" layer="21"/>
+<wire x1="23" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<polygon width="0.127" layer="29">
+<vertex x="1" y="57.5"/>
+<vertex x="22" y="57.5"/>
+<vertex x="22" y="1"/>
+<vertex x="1" y="1"/>
+</polygon>
+<hole x="3.88" y="3.85" drill="3.56"/>
+<hole x="19.12" y="3.85" drill="3.56"/>
+<hole x="19.12" y="54.65" drill="3.56"/>
+<hole x="3.88" y="54.65" drill="3.56"/>
+<circle x="3.88" y="54.65" radius="3.7" width="0.127" layer="39"/>
+<circle x="19.12" y="54.65" radius="3.7" width="0.127" layer="39"/>
+<circle x="3.88" y="3.85" radius="3.7" width="0.127" layer="39"/>
+<circle x="19.12" y="3.85" radius="3.7" width="0.127" layer="39"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ONSEN">
+<wire x1="0" y1="0.508" x2="1.27" y2="1.778" width="0.254" layer="94" curve="90"/>
+<wire x1="1.27" y1="1.778" x2="0" y2="3.048" width="0.254" layer="94" curve="90"/>
+<wire x1="0" y1="3.048" x2="-1.27" y2="4.318" width="0.254" layer="94" curve="-90"/>
+<wire x1="-1.27" y1="4.318" x2="0" y2="5.588" width="0.254" layer="94" curve="-90"/>
+<text x="-5.08" y="-2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="-2.54" y1="0.508" x2="-1.27" y2="1.778" width="0.254" layer="94" curve="90"/>
+<wire x1="-1.27" y1="1.778" x2="-2.54" y2="3.048" width="0.254" layer="94" curve="90"/>
+<wire x1="-2.54" y1="3.048" x2="-3.81" y2="4.318" width="0.254" layer="94" curve="-90"/>
+<wire x1="-3.81" y1="4.318" x2="-2.54" y2="5.588" width="0.254" layer="94" curve="-90"/>
+<wire x1="2.54" y1="0.508" x2="3.81" y2="1.778" width="0.254" layer="94" curve="90"/>
+<wire x1="3.81" y1="1.778" x2="2.54" y2="3.048" width="0.254" layer="94" curve="90"/>
+<wire x1="2.54" y1="3.048" x2="1.27" y2="4.318" width="0.254" layer="94" curve="-90"/>
+<wire x1="1.27" y1="4.318" x2="2.54" y2="5.588" width="0.254" layer="94" curve="-90"/>
+<wire x1="-3.81" y1="2.286" x2="-4.064" y2="2.286" width="0.254" layer="94"/>
+<wire x1="-4.064" y1="2.286" x2="-5.334" y2="0" width="0.254" layer="94" curve="154.942399"/>
+<wire x1="-5.334" y1="0" x2="5.334" y2="0.508" width="0.254" layer="94" curve="52.718968"/>
+<wire x1="5.334" y1="0.508" x2="4.318" y2="2.54" width="0.254" layer="94" curve="165.789141"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DCC5923L">
+<description>&lt;b&gt;DCC5923L&lt;/b&gt;&lt;br&gt;
+ALPHA &lt;br&gt;
+58.5x23&lt;br&gt;
+高さ設定可</description>
+<gates>
+<gate name="G$1" symbol="ONSEN" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="DCC5923L">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14528,12 +14530,12 @@ TVSダイオード&lt;br&gt;
 <part name="R4" library="user_rcl" deviceset="R_REG" device="" value="10"/>
 <part name="R5" library="user_rcl" deviceset="R_REG" device="" value="10"/>
 <part name="R6" library="user_rcl" deviceset="R_REG" device="" value="10"/>
-<part name="R7" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
-<part name="R8" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
-<part name="R9" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
-<part name="R10" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
-<part name="R11" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
-<part name="R12" library="user_rcl" deviceset="R_REG" device="" value="10k"/>
+<part name="R7" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
+<part name="R8" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
+<part name="R9" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
+<part name="R10" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
+<part name="R11" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
+<part name="R12" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
@@ -14632,6 +14634,8 @@ TVSダイオード&lt;br&gt;
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
 <part name="D8" library="user_diode" deviceset="SMAJ22A-13-F" device=""/>
+<part name="U$1" library="user_conector" deviceset="XH_2P" device=""/>
+<part name="U$2" library="user_heatshink" deviceset="DCC5923L" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15077,6 +15081,11 @@ typicaliy [63MU105KC24532]</text>
 <attribute name="NAME" x="317.0936" y="228.7016" size="1.778" layer="95"/>
 <attribute name="VALUE" x="318.1096" y="239.3442" size="1.778" layer="96"/>
 </instance>
+<instance part="U$1" gate="G$1" x="342.9" y="233.68" smashed="yes" rot="MR0"/>
+<instance part="U$2" gate="G$1" x="386.08" y="231.14" smashed="yes">
+<attribute name="NAME" x="381" y="228.6" size="1.27" layer="95"/>
+<attribute name="VALUE" x="381" y="226.06" size="1.27" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -15107,6 +15116,9 @@ typicaliy [63MU105KC24532]</text>
 <pinref part="D8" gate="G$1" pin="A"/>
 <wire x1="317.5" y1="231.14" x2="304.8" y2="231.14" width="0.1524" layer="91"/>
 <junction x="304.8" y="231.14"/>
+<pinref part="U$1" gate="G$1" pin="PIN2"/>
+<wire x1="337.82" y1="231.14" x2="317.5" y2="231.14" width="0.1524" layer="91"/>
+<junction x="317.5" y="231.14"/>
 </segment>
 <segment>
 <pinref part="R21" gate="G$1" pin="2"/>
@@ -15388,6 +15400,11 @@ typicaliy [63MU105KC24532]</text>
 <junction x="304.8" y="238.76"/>
 <pinref part="D8" gate="G$1" pin="C"/>
 <wire x1="317.5" y1="238.76" x2="317.5" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="238.76" x2="332.74" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="238.76" x2="332.74" y2="236.22" width="0.1524" layer="91"/>
+<junction x="317.5" y="238.76"/>
+<pinref part="U$1" gate="G$1" pin="PIN1"/>
+<wire x1="332.74" y1="236.22" x2="337.82" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="A" pin="BATTERY"/>
@@ -15648,6 +15665,12 @@ typicaliy [63MU105KC24532]</text>
 <wire x1="172.72" y1="175.26" x2="177.8" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="175.26" x2="177.8" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="162.56" x2="180.34" y2="162.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PIN19_GND"/>
+<wire x1="101.6" y1="213.36" x2="134.62" y2="213.36" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GNDA"/>
+<wire x1="134.62" y1="213.36" x2="134.62" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -15979,14 +16002,6 @@ typicaliy [63MU105KC24532]</text>
 <wire x1="274.32" y1="157.48" x2="279.4" y2="157.48" width="0.1524" layer="91"/>
 <junction x="274.32" y="157.48"/>
 <label x="279.4" y="157.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<wire x1="101.6" y1="213.36" x2="134.62" y2="213.36" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GNDA"/>
-<wire x1="134.62" y1="213.36" x2="134.62" y2="205.74" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="PIN19_GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
