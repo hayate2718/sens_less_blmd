@@ -103,6 +103,121 @@
 </package>
 </packages>
 </library>
+<library name="user_ic">
+<packages>
+<package name="LQFP48PIN">
+<description>&lt;b&gt;48-pin plastic LQFP (FPT-48P-M26)&lt;/b&gt;&lt;p&gt;</description>
+<wire x1="-3.375" y1="3.1" x2="-3.1" y2="3.375" width="0.254" layer="21"/>
+<wire x1="-3.1" y1="3.375" x2="3.1" y2="3.375" width="0.254" layer="21"/>
+<wire x1="3.1" y1="3.375" x2="3.375" y2="3.1" width="0.254" layer="21"/>
+<wire x1="3.375" y1="3.1" x2="3.375" y2="-3.1" width="0.254" layer="21"/>
+<wire x1="3.375" y1="-3.1" x2="3.1" y2="-3.375" width="0.254" layer="21"/>
+<wire x1="3.1" y1="-3.375" x2="-3.1" y2="-3.375" width="0.254" layer="21"/>
+<wire x1="-3.1" y1="-3.375" x2="-3.375" y2="-3.1" width="0.254" layer="21"/>
+<wire x1="-3.375" y1="-3.1" x2="-3.375" y2="3.1" width="0.254" layer="21"/>
+<circle x="-4.159" y="-4.159" radius="0.6" width="0.254" layer="21"/>
+<smd name="PIN1" x="-2.75" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN2" x="-2.25" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN3" x="-1.75" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN4" x="-1.25" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN5" x="-0.75" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN6" x="-0.25" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN7" x="0.25" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN8" x="0.75" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN9" x="1.25" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN10" x="1.75" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN11" x="2.25" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN12" x="2.75" y="-4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN13" x="4.25" y="-2.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN14" x="4.25" y="-2.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN15" x="4.25" y="-1.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN16" x="4.25" y="-1.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN17" x="4.25" y="-0.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN18" x="4.25" y="-0.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN19" x="4.25" y="0.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN20" x="4.25" y="0.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN21" x="4.25" y="1.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN22" x="4.25" y="1.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN23" x="4.25" y="2.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN24" x="4.25" y="2.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN25" x="2.75" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN26" x="2.25" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN27" x="1.75" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN28" x="1.25" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN29" x="0.75" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN30" x="0.25" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN31" x="-0.25" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN32" x="-0.75" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN33" x="-1.25" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN34" x="-1.75" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN35" x="-2.25" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN36" x="-2.75" y="4.25" dx="0.2" dy="1" layer="1"/>
+<smd name="PIN37" x="-4.25" y="2.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN38" x="-4.25" y="2.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN39" x="-4.25" y="1.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN40" x="-4.25" y="1.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN41" x="-4.25" y="0.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN42" x="-4.25" y="0.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN43" x="-4.25" y="-0.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN44" x="-4.25" y="-0.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN45" x="-4.25" y="-1.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN46" x="-4.25" y="-1.75" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN47" x="-4.25" y="-2.25" dx="1" dy="0.2" layer="1"/>
+<smd name="PIN48" x="-4.25" y="-2.75" dx="1" dy="0.2" layer="1"/>
+<rectangle x1="-2.85" y1="-4.5" x2="-2.65" y2="-3.45" layer="51"/>
+<rectangle x1="-2.35" y1="-4.5" x2="-2.15" y2="-3.45" layer="51"/>
+<rectangle x1="-1.85" y1="-4.5" x2="-1.65" y2="-3.45" layer="51"/>
+<rectangle x1="-1.35" y1="-4.5" x2="-1.15" y2="-3.45" layer="51"/>
+<rectangle x1="-0.85" y1="-4.5" x2="-0.65" y2="-3.45" layer="51"/>
+<rectangle x1="-0.35" y1="-4.5" x2="-0.15" y2="-3.45" layer="51"/>
+<rectangle x1="0.15" y1="-4.5" x2="0.35" y2="-3.45" layer="51"/>
+<rectangle x1="0.65" y1="-4.5" x2="0.85" y2="-3.45" layer="51"/>
+<rectangle x1="1.15" y1="-4.5" x2="1.35" y2="-3.45" layer="51"/>
+<rectangle x1="1.65" y1="-4.5" x2="1.85" y2="-3.45" layer="51"/>
+<rectangle x1="2.15" y1="-4.5" x2="2.35" y2="-3.45" layer="51"/>
+<rectangle x1="2.65" y1="-4.5" x2="2.85" y2="-3.45" layer="51"/>
+<rectangle x1="3.45" y1="-2.85" x2="4.5" y2="-2.65" layer="51"/>
+<rectangle x1="3.45" y1="-2.35" x2="4.5" y2="-2.15" layer="51"/>
+<rectangle x1="3.45" y1="-1.85" x2="4.5" y2="-1.65" layer="51"/>
+<rectangle x1="3.45" y1="-1.35" x2="4.5" y2="-1.15" layer="51"/>
+<rectangle x1="3.45" y1="-0.85" x2="4.5" y2="-0.65" layer="51"/>
+<rectangle x1="3.45" y1="-0.35" x2="4.5" y2="-0.15" layer="51"/>
+<rectangle x1="3.45" y1="0.15" x2="4.5" y2="0.35" layer="51"/>
+<rectangle x1="3.45" y1="0.65" x2="4.5" y2="0.85" layer="51"/>
+<rectangle x1="3.45" y1="1.15" x2="4.5" y2="1.35" layer="51"/>
+<rectangle x1="3.45" y1="1.65" x2="4.5" y2="1.85" layer="51"/>
+<rectangle x1="3.45" y1="2.15" x2="4.5" y2="2.35" layer="51"/>
+<rectangle x1="3.45" y1="2.65" x2="4.5" y2="2.85" layer="51"/>
+<rectangle x1="2.65" y1="3.45" x2="2.85" y2="4.5" layer="51"/>
+<rectangle x1="2.15" y1="3.45" x2="2.35" y2="4.5" layer="51"/>
+<rectangle x1="1.65" y1="3.45" x2="1.85" y2="4.5" layer="51"/>
+<rectangle x1="1.15" y1="3.45" x2="1.35" y2="4.5" layer="51"/>
+<rectangle x1="0.65" y1="3.45" x2="0.85" y2="4.5" layer="51"/>
+<rectangle x1="0.15" y1="3.45" x2="0.35" y2="4.5" layer="51"/>
+<rectangle x1="-0.35" y1="3.45" x2="-0.15" y2="4.5" layer="51"/>
+<rectangle x1="-0.85" y1="3.45" x2="-0.65" y2="4.5" layer="51"/>
+<rectangle x1="-1.35" y1="3.45" x2="-1.15" y2="4.5" layer="51"/>
+<rectangle x1="-1.85" y1="3.45" x2="-1.65" y2="4.5" layer="51"/>
+<rectangle x1="-2.35" y1="3.45" x2="-2.15" y2="4.5" layer="51"/>
+<rectangle x1="-2.85" y1="3.45" x2="-2.65" y2="4.5" layer="51"/>
+<rectangle x1="-4.5" y1="2.65" x2="-3.45" y2="2.85" layer="51"/>
+<rectangle x1="-4.5" y1="2.15" x2="-3.45" y2="2.35" layer="51"/>
+<rectangle x1="-4.5" y1="1.65" x2="-3.45" y2="1.85" layer="51"/>
+<rectangle x1="-4.5" y1="1.15" x2="-3.45" y2="1.35" layer="51"/>
+<rectangle x1="-4.5" y1="0.65" x2="-3.45" y2="0.85" layer="51"/>
+<rectangle x1="-4.5" y1="0.15" x2="-3.45" y2="0.35" layer="51"/>
+<rectangle x1="-4.5" y1="-0.35" x2="-3.45" y2="-0.15" layer="51"/>
+<rectangle x1="-4.5" y1="-0.85" x2="-3.45" y2="-0.65" layer="51"/>
+<rectangle x1="-4.5" y1="-1.35" x2="-3.45" y2="-1.15" layer="51"/>
+<rectangle x1="-4.5" y1="-1.85" x2="-3.45" y2="-1.65" layer="51"/>
+<rectangle x1="-4.5" y1="-2.35" x2="-3.45" y2="-2.15" layer="51"/>
+<rectangle x1="-4.5" y1="-2.85" x2="-3.45" y2="-2.65" layer="51"/>
+<text x="-2.54" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-3.81" y1="-3.81" x2="3.81" y2="3.81" layer="39"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -298,8 +413,57 @@ design rules under a new name.</description>
 <elements>
 <element name="CON1" library="user_conector" package="JQ_S8P" value="" x="29.06" y="0.35" locked="yes" smashed="yes" rot="MR0"/>
 <element name="CON2" library="user_conector" package="JQ_S8P" value="" x="29.06" y="51.15" locked="yes" smashed="yes" rot="MR0"/>
+<element name="U$1" library="user_ic" package="LQFP48PIN" value="PIC32MK0512MCJ048" x="15.24" y="29.21" smashed="yes">
+<attribute name="NAME" x="12.7" y="34.29" size="1.27" layer="25"/>
+<attribute name="VALUE" x="12.7" y="22.86" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
+<signal name="ALO">
+<contactref element="CON1" pad="P$1"/>
+</signal>
+<signal name="AHI">
+<contactref element="CON1" pad="P$2"/>
+</signal>
+<signal name="BLO">
+<contactref element="CON1" pad="P$3"/>
+</signal>
+<signal name="BHI">
+<contactref element="CON1" pad="P$4"/>
+</signal>
+<signal name="CLO">
+<contactref element="CON1" pad="P$5"/>
+</signal>
+<signal name="CHI">
+<contactref element="CON1" pad="P$6"/>
+</signal>
+<signal name="VCC">
+<contactref element="CON2" pad="P$1"/>
+</signal>
+<signal name="MD_FAULT">
+<contactref element="CON2" pad="P$2"/>
+</signal>
+<signal name="GND">
+<contactref element="CON2" pad="P$3"/>
+<contactref element="CON1" pad="P$7"/>
+<contactref element="CON1" pad="P$8"/>
+<wire x1="11.56" y1="3.05" x2="21.56" y2="53.85" width="0" layer="19" extent="1-1"/>
+<wire x1="9.06" y1="3.05" x2="11.56" y2="3.05" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="AVCC">
+<contactref element="CON2" pad="P$4"/>
+</signal>
+<signal name="AGND">
+<contactref element="CON2" pad="P$5"/>
+<contactref element="CON2" pad="P$7"/>
+<wire x1="11.56" y1="53.85" x2="16.56" y2="53.85" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="U_CURRENT">
+<contactref element="CON2" pad="P$6"/>
+</signal>
+<signal name="W_CURRENT">
+<contactref element="CON2" pad="P$8"/>
+</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
