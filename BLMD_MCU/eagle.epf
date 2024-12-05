@@ -277,6 +277,7 @@ UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_osc.lbr"
 UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_rcl.lbr"
 UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_swich.lbr"
 UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/user_tr_fet_igbt.lbr"
+UsedLibrary="C:/Users/0_hayate/Documents/EAGLE/libraries/DL_lbr/7810-8P8C.lbr"
 
 [Win_1]
 Type="Control Panel"
