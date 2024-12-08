@@ -6228,7 +6228,7 @@ sot23-6も含まれる</description>
 <part name="P+19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="LED1" library="user_leds" deviceset="RGB_LED" device=""/>
 <part name="U$6" library="user_tr_fet_igbt" deviceset="FDC6305" device=""/>
-<part name="U$7" library="user_tr_fet_igbt" deviceset="SOT23_NFET" device=""/>
+<part name="U$7" library="user_tr_fet_igbt" deviceset="SOT23_NFET" device="" value="AO3400A"/>
 <part name="R13" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
 <part name="R14" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
 <part name="R15" library="user_rcl" deviceset="R_REG" device="" value="47k"/>
@@ -6555,7 +6555,7 @@ sot23-6も含まれる</description>
 <instance part="U$6" gate="G$1" x="106.68" y="50.8" smashed="yes" rot="R90"/>
 <instance part="U$7" gate="G$1" x="81.28" y="73.66" smashed="yes">
 <attribute name="NAME" x="86.36" y="76.2" size="1.778" layer="95"/>
-<attribute name="VALUE" x="66.04" y="78.74" size="1.778" layer="96"/>
+<attribute name="VALUE" x="86.36" y="71.12" size="1.778" layer="96"/>
 </instance>
 <instance part="R13" gate="G$1" x="76.2" y="30.48" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.7014" y="26.67" size="1.778" layer="95" rot="R90"/>
