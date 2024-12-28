@@ -29,7 +29,7 @@ PowerSupply
 |14|RB3|PGD1||
 |15|AVDD|||
 |16|AVSS|||
-|17|RC0|QEQ1|Unsupported|
+|17|RC0|QEA1|Unsupported|
 |18|RC1|INDX1|Unsupported|
 |19|RC2|HOME1|Unsupported|
 |20|RC11|NONE||
